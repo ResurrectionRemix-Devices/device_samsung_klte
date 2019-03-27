@@ -37,9 +37,9 @@
   },
   {
     "remote":      "github",
-    "repository":  "LineageOS/android_device_samsung_qcom-common",
+    "repository":  "fessmm/device_samsung_qcom-common",
     "target_path": "device/samsung/qcom-common",
-    "branch":      "lineage-16.0"
+    "branch":      "pie"
   },
   {
     "remote":      "github",
