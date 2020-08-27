@@ -1,5 +1,7 @@
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2014-2016 The CyanogenMod Project
+# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2020 The ResurrectionRemix Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,17 +14,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_klte.mk \
-    $(LOCAL_DIR)/rr_klte.mk
+# Inherit some common ResurrectionRemix stuff.
+$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
-COMMON_LUNCH_CHOICES := \
-    lineage_klte-user \
-    lineage_klte-userdebug \
-    lineage_klte-eng
+$(call inherit-product, device/samsung/klte/full_klte.mk)
 
-COMMON_LUNCH_CHOICES := \
-    rr_klte-user \
-    rr_klte-userdebug \
-    rr_klte-eng
+PRODUCT_DEVICE := klte
+PRODUCT_NAME := rr_klte
